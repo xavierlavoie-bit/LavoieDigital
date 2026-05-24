@@ -37,6 +37,15 @@ const SECTIONS: Section[] = [
   },
   {
     num: "02",
+    href: "/travaux",
+    title: "Travaux",
+    tagline: "Des projets pensés pour durer.",
+    bullets: ["Plateformes B2B", "Sites haut de gamme", "Apps mobiles"],
+    Visual: DeviceVisual,
+    Icon: TravauxIcon,
+  },
+  {
+    num: "03",
     href: "/approche",
     title: "Approche",
     tagline: "Un processus clair, des résultats prévisibles.",
@@ -45,7 +54,7 @@ const SECTIONS: Section[] = [
     Icon: ApprocheIcon,
   },
   {
-    num: "03",
+    num: "04",
     href: "/difference",
     title: "Différence",
     tagline: "Ce qu'on apporte que les autres n'apportent pas.",
@@ -56,15 +65,6 @@ const SECTIONS: Section[] = [
     ],
     Visual: SparkVisual,
     Icon: DifferenceIcon,
-  },
-  {
-    num: "04",
-    href: "/travaux",
-    title: "Travaux",
-    tagline: "Des projets pensés pour durer.",
-    bullets: ["Plateformes B2B", "Sites haut de gamme", "Apps mobiles"],
-    Visual: DeviceVisual,
-    Icon: TravauxIcon,
   },
 ];
 

@@ -35,7 +35,7 @@ export default function BookingPage() {
       <div className="h-24" />
       <Booking />
       <PageNav
-        prev={{ href: "/travaux", label: "Travaux", eyebrow: "Retour — 04" }}
+        prev={{ href: "/difference", label: "Différence", eyebrow: "Retour — 04" }}
         next={{ href: "/", label: "Accueil", eyebrow: "Revenir au début" }}
       />
     </>

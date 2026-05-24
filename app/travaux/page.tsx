@@ -37,14 +37,14 @@ export default function TravauxPage() {
       <Work />
       <PageNav
         prev={{
-          href: "/difference",
-          label: "Différence",
-          eyebrow: "Précédent — 03",
+          href: "/services",
+          label: "Services",
+          eyebrow: "Précédent — 01",
         }}
         next={{
-          href: "/booking",
-          label: "Réserver un appel",
-          eyebrow: "Prêt à démarrer ?",
+          href: "/approche",
+          label: "Approche",
+          eyebrow: "Suivant — 03",
         }}
       />
     </>

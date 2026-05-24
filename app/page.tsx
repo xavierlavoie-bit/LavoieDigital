@@ -7,9 +7,12 @@ export default function Home() {
     <>
       <Hero />
       <ExplorePanels />
-      <PageNav
-        next={{ href: "/services", label: "Services", eyebrow: "Suivant — 01" }}
-      />
+      {/* Mobile only — desktop has the active-content area in ExplorePanels */}
+      <div className="md:hidden">
+        <PageNav
+          next={{ href: "/services", label: "Services", eyebrow: "Suivant — 01" }}
+        />
+      </div>
     </>
   );
 }

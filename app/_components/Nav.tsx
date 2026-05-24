@@ -8,9 +8,9 @@ import { useState } from "react";
 
 const LINKS = [
   { href: "/services", label: "Services" },
+  { href: "/travaux", label: "Travaux" },
   { href: "/approche", label: "Approche" },
   { href: "/difference", label: "Différence" },
-  { href: "/travaux", label: "Travaux" },
 ];
 
 export default function Nav() {

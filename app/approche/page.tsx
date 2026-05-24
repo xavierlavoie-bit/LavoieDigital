@@ -35,11 +35,11 @@ export default function ApprochePage() {
       <div className="h-24" />
       <Process />
       <PageNav
-        prev={{ href: "/services", label: "Services", eyebrow: "Précédent — 01" }}
+        prev={{ href: "/travaux", label: "Travaux", eyebrow: "Précédent — 02" }}
         next={{
           href: "/difference",
           label: "Différence",
-          eyebrow: "Suivant — 03",
+          eyebrow: "Suivant — 04",
         }}
       />
     </>

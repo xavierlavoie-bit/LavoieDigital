@@ -13,9 +13,9 @@ Lavoie Digital est un studio indépendant fondé par Xavier Lavoie en 2026. Le s
 ## Services
 
 - [Services](https://lavoiedigital.ca/services): Applications full-stack (SaaS, dashboards, outils internes), sites web premium (vitrine, e-commerce, landing), branding digital (identité, design system) et suivi de croissance continu.
+- [Travaux](https://lavoiedigital.ca/travaux): Plateformes B2B, sites haut de gamme, applications mobiles.
 - [Approche](https://lavoiedigital.ca/approche): Processus en 4 étapes — Découverte (1 sem), Design (1 sem), Développement (1-2 sem), Lancement & suivi (en continu).
 - [Différence](https://lavoiedigital.ca/difference): Suivi client illimité, esthétique hors du commun, code production TypeScript strict, accessibilité locale Québec.
-- [Travaux](https://lavoiedigital.ca/travaux): Plateformes B2B, sites haut de gamme, applications mobiles.
 
 ## Stack technologique
 

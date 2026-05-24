@@ -38,7 +38,7 @@ export default function ServicesPage() {
       <Services />
       <PageNav
         prev={{ href: "/", label: "Accueil", eyebrow: "Retour" }}
-        next={{ href: "/approche", label: "Approche", eyebrow: "Suivant — 02" }}
+        next={{ href: "/travaux", label: "Travaux", eyebrow: "Suivant — 02" }}
       />
     </>
   );

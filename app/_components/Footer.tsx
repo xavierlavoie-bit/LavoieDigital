@@ -53,9 +53,9 @@ export default function Footer() {
           </p>
           <ul className="mt-4 space-y-2.5 text-[14px]">
             <li><a href="/services" className="link-underline text-white/70 hover:text-white">Services</a></li>
+            <li><a href="/travaux" className="link-underline text-white/70 hover:text-white">Travaux</a></li>
             <li><a href="/approche" className="link-underline text-white/70 hover:text-white">Approche</a></li>
             <li><a href="/difference" className="link-underline text-white/70 hover:text-white">Différence</a></li>
-            <li><a href="/travaux" className="link-underline text-white/70 hover:text-white">Travaux</a></li>
             <li><a href="/booking" className="link-underline text-white/70 hover:text-white">Réserver</a></li>
           </ul>
         </div>
