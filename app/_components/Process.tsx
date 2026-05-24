@@ -40,7 +40,7 @@ export default function Process() {
   const lineScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section id="process" className="relative z-10 px-6 py-32 sm:px-10">
+    <section id="process" className="relative z-10 px-6 py-16 sm:px-10 md:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Approche"
@@ -48,7 +48,7 @@ export default function Process() {
           sub="Chaque projet suit la même rigueur. Pas de surprises, pas de zones grises — juste du livrable de qualité."
         />
 
-        <div ref={ref} className="relative mt-20">
+        <div ref={ref} className="relative mt-12">
           {/* Vertical progress rail (desktop) */}
           <div className="pointer-events-none absolute left-[27px] top-0 hidden h-full w-px bg-white/8 md:block">
             <motion.div

@@ -72,7 +72,7 @@ export default function ExplorePanels() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section className="relative z-10 px-6 py-32 sm:px-10">
+    <section className="relative z-10 px-6 py-16 sm:px-10 md:py-24">
       <div className="mx-auto max-w-6xl">
         {/* Heading */}
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
@@ -104,9 +104,10 @@ export default function ExplorePanels() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden max-w-xs text-[14px] leading-relaxed text-white/45 sm:block"
+            className="hidden max-w-xs text-[14px] leading-relaxed text-white/55 sm:block"
           >
-            Survolez une icône. Cliquez pour entrer.
+            Survolez pour un aperçu —{" "}
+            <span className="text-white">cliquez</span> pour ouvrir la page.
           </motion.p>
         </div>
 
@@ -116,7 +117,7 @@ export default function ExplorePanels() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mt-20 hidden md:block"
+          className="relative mt-12 hidden md:block md:mt-14"
           onMouseLeave={() => setActive(null)}
         >
           {/* Soft ambient wash so the icons feel anchored without a frame */}
@@ -290,6 +291,41 @@ function IconCard({
                 padding: "1px",
               }}
             />
+
+            {/* Click affordance — small badge top-right that lifts on active */}
+            <motion.div
+              aria-hidden
+              animate={{
+                scale: isActive ? 1.15 : 1,
+                opacity: isActive ? 1 : 0.7,
+                y: isActive ? -2 : 0,
+                x: isActive ? 2 : 0,
+              }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="pointer-events-none absolute -top-2 -right-2 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-white/30 text-white"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(255,255,255,0.85), rgba(255,255,255,0.55))",
+                boxShadow:
+                  "0 6px 14px -4px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.6)",
+              }}
+            >
+              <svg
+                width="11"
+                height="11"
+                viewBox="0 0 14 14"
+                fill="none"
+                className="text-black"
+              >
+                <path
+                  d="M4 10L10 4M10 4H5M10 4v5"
+                  stroke="currentColor"
+                  strokeWidth="1.7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </motion.div>
           </motion.div>
         </Link>
       </motion.div>
@@ -318,7 +354,7 @@ function IconCard({
 
 function ActiveContent({ section }: { section: Section | null }) {
   return (
-    <div className="relative mt-20 flex min-h-[160px] items-start justify-center">
+    <div className="relative mt-14 flex min-h-[160px] items-start justify-center">
       <AnimatePresence mode="wait">
         {section ? (
           <motion.div
@@ -351,9 +387,9 @@ function ActiveContent({ section }: { section: Section | null }) {
             </ul>
             <Link
               href={section.href}
-              className="group mt-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-5 py-2.5 text-[13px] text-white/85 backdrop-blur-xl transition-all duration-300 hover:gap-3 hover:bg-white/[0.1] hover:text-white"
+              className="group mt-2 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-[13px] font-medium text-black shadow-[0_20px_50px_-15px_rgba(255,255,255,0.35)] transition-all duration-300 hover:gap-3 hover:bg-white/90"
             >
-              Découvrir {section.title}
+              Ouvrir la page {section.title}
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path
                   d="M1 7h12m0 0L7 1m6 6l-6 6"
@@ -364,6 +400,9 @@ function ActiveContent({ section }: { section: Section | null }) {
                 />
               </svg>
             </Link>
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/35">
+              Aperçu — cliquez pour la page complète
+            </p>
           </motion.div>
         ) : (
           <motion.div
@@ -372,10 +411,10 @@ function ActiveContent({ section }: { section: Section | null }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="flex flex-col items-center gap-3 text-white/35"
+            className="flex flex-col items-center gap-3 text-white/40"
           >
             <span className="font-mono text-[10px] uppercase tracking-[0.3em]">
-              Survolez une icône
+              Survolez · Cliquez pour ouvrir
             </span>
             <motion.div
               animate={{ y: [-3, 3, -3] }}

@@ -89,7 +89,7 @@ export default function Booking() {
   };
 
   return (
-    <section id="booking" className="relative z-10 px-6 py-32 sm:px-10">
+    <section id="booking" className="relative z-10 px-6 py-16 sm:px-10 md:py-24">
       <div className="mx-auto max-w-5xl">
         <SectionHeader
           eyebrow="Réserver"

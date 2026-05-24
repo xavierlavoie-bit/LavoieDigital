@@ -33,7 +33,7 @@ const STATS = [
 
 export default function Edge() {
   return (
-    <section id="edge" className="relative z-10 px-6 py-32 sm:px-10">
+    <section id="edge" className="relative z-10 px-6 py-16 sm:px-10 md:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="La différence"

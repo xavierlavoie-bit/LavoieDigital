@@ -13,7 +13,7 @@ export default function PageNav({
   next?: Item;
 }) {
   return (
-    <section className="relative z-10 px-6 pb-32 sm:px-10">
+    <section className="relative z-10 px-6 pb-16 sm:px-10 md:pb-24">
       <div className="mx-auto max-w-6xl">
         <div
           className="grid grid-cols-1 gap-3 overflow-hidden rounded-3xl border border-white/10 md:grid-cols-2"

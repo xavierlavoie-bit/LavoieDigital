@@ -81,7 +81,7 @@ const SERVICES: Service[] = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative z-10 px-6 py-32 sm:px-10">
+    <section id="services" className="relative z-10 px-6 py-16 sm:px-10 md:py-24">
       <div className="mx-auto max-w-6xl">
         <SectionHeader
           eyebrow="Services"
