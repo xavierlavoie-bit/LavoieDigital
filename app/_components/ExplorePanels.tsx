@@ -250,7 +250,7 @@ function IconCard({
           onMouseLeave={onLeave}
           aria-label={`${section.title} — ${section.tagline}`}
           className="group relative block"
-          style={{ transformPerspective: 1000 }}
+          style={{ perspective: "1000px" }}
         >
           <motion.div
             style={{
