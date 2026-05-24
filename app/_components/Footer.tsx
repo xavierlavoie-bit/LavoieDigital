@@ -65,7 +65,7 @@ export default function Footer() {
             Contact
           </p>
           <ul className="mt-4 space-y-2.5 text-[14px]">
-            <li><a href="mailto:bonjour@lavoie.digital" className="link-underline text-white/70 hover:text-white">bonjour@lavoie.digital</a></li>
+            <li><a href="mailto:info@lavoiedigital.ca" className="link-underline text-white/70 hover:text-white">info@lavoiedigital.ca</a></li>
             <li><a href="tel:+14180000000" className="link-underline text-white/70 hover:text-white">+1 (418) 000-0000</a></li>
             <li><a href="#" className="link-underline text-white/70 hover:text-white">Instagram</a></li>
             <li><a href="#" className="link-underline text-white/70 hover:text-white">LinkedIn</a></li>

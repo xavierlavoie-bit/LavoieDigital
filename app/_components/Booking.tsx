@@ -232,10 +232,10 @@ export default function Booking() {
           </div>
           <div className="flex flex-wrap items-center gap-4 text-[13px]">
             <a
-              href="mailto:bonjour@lavoie.digital"
+              href="mailto:info@lavoiedigital.ca"
               className="link-underline text-white/90"
             >
-              bonjour@lavoie.digital
+              info@lavoiedigital.ca
             </a>
             <span className="hidden text-white/15 sm:inline">·</span>
             <a href="tel:+14180000000" className="link-underline text-white/90">

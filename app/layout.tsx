@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Lavoie Digital — Studio code & web · Québec",
   description:
     "Studio de développement full-stack basé au Québec. Applications, sites et plateformes sur mesure pour les PME — esthétique haut de gamme, suivi client illimité.",
-  metadataBase: new URL("https://lavoie.digital"),
+  metadataBase: new URL("https://lavoiedigital.ca"),
   openGraph: {
     title: "Lavoie Digital — Studio code & web",
     description:
