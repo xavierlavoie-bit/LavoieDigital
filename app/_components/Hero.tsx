@@ -62,18 +62,85 @@ export default function Hero() {
         style={{ scale: heroScale, opacity: heroOpacity, y: heroY }}
         className="relative z-10 mx-auto flex min-h-[100svh] max-w-[1400px] flex-col items-center justify-center px-6 pt-28 pb-20 text-center sm:px-10"
       >
-        {/* Eyebrow chip */}
+        {/* Tech masthead — live signal · metadata · cursor */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="glass mb-10 inline-flex items-center gap-2.5 rounded-full px-3.5 py-1.5 text-[11px] tracking-[0.18em] uppercase text-white/70"
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-12 inline-flex items-center gap-4 font-mono text-[10px] uppercase tracking-[0.3em] text-white/55"
         >
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-white/70 opacity-75" />
-            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-white" />
+          {/* Live signal bars */}
+          <span className="flex items-end gap-[2px]" aria-hidden>
+            {[5, 8, 11].map((h, i) => (
+              <motion.span
+                key={i}
+                animate={{ opacity: [0.25, 1, 0.25] }}
+                transition={{
+                  duration: 1.8,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: i * 0.22,
+                }}
+                className="w-[2px] rounded-[1px] bg-white/75"
+                style={{ height: h }}
+              />
+            ))}
           </span>
-          Studio code &amp; web · Québec · Est. 2026
+
+          {/* Metadata with discrete holographic sweep */}
+          <span className="relative flex items-center gap-3 overflow-hidden whitespace-nowrap py-1">
+            <motion.span
+              aria-hidden
+              initial={{ x: "-110%", opacity: 1 }}
+              animate={{ x: "220%", opacity: [1, 1, 0] }}
+              transition={{
+                duration: 2.4,
+                delay: 0.6,
+                ease: "easeInOut",
+                times: [0, 0.85, 1],
+              }}
+              className="pointer-events-none absolute inset-y-0 w-1/3"
+              style={{
+                background:
+                  "linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent)",
+                mixBlendMode: "overlay",
+              }}
+            />
+            <span className="text-white/80">N°001</span>
+            <span className="text-white/20">/</span>
+            <span>Studio · Code &amp; Web</span>
+            <span className="hidden text-white/20 sm:inline">/</span>
+            <span className="hidden sm:inline">Québec, CA</span>
+            <span className="hidden text-white/20 sm:inline">/</span>
+            <span className="hidden sm:inline">MMXXVI</span>
+          </span>
+
+          {/* Decorative hairline */}
+          <motion.span
+            aria-hidden
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{
+              duration: 0.9,
+              delay: 0.4,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            style={{ transformOrigin: "left" }}
+            className="hidden h-px w-10 bg-gradient-to-r from-white/30 to-transparent sm:block"
+          />
+
+          {/* Blinking terminal cursor */}
+          <motion.span
+            aria-hidden
+            animate={{ opacity: [1, 1, 0, 0] }}
+            transition={{
+              duration: 1.1,
+              repeat: Infinity,
+              times: [0, 0.5, 0.5, 1],
+              ease: "linear",
+            }}
+            className="inline-block h-3 w-[6px] bg-white/70"
+          />
         </motion.div>
 
         {/* 3D Floating logo */}
