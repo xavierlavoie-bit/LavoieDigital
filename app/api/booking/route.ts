@@ -60,16 +60,19 @@ export async function POST(request: Request) {
     }
 
     const apiKey = process.env.SENDGRID_API_KEY;
-    const from = process.env.SENDGRID_FROM_EMAIL;
+    const fromEmail = process.env.SENDGRID_FROM_EMAIL;
+    const fromName = process.env.SENDGRID_FROM_NAME || "Lavoie Digital";
     const to = process.env.SENDGRID_TO_EMAIL;
 
-    if (!apiKey || !from || !to) {
+    if (!apiKey || !fromEmail || !to) {
       console.error("[booking] SendGrid env vars missing");
       return NextResponse.json(
         { error: "Configuration courriel manquante." },
         { status: 500 },
       );
     }
+
+    const from = { email: fromEmail, name: fromName };
 
     sgMail.setApiKey(apiKey);
 
