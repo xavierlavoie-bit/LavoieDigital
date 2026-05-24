@@ -146,7 +146,7 @@ export async function POST(request: Request) {
       signature: "Xavier Lavoie — Lavoie Digital",
     });
 
-    await Promise.all([
+    const [notifResult, confirmResult] = await Promise.allSettled([
       sgMail.send({
         to,
         from,
@@ -163,6 +163,56 @@ export async function POST(request: Request) {
         html: confirmHtml,
       }),
     ]);
+
+    if (notifResult.status === "fulfilled") {
+      const r = notifResult.value?.[0];
+      console.log(
+        `[booking] notif → ${to} status=${r?.statusCode ?? "?"} messageId=${r?.headers?.["x-message-id"] ?? "?"}`,
+      );
+    } else {
+      const err = notifResult.reason as {
+        response?: { body?: unknown };
+        message?: string;
+        code?: number;
+      };
+      console.error(
+        "[booking] notif FAILED:",
+        err.code,
+        err.message,
+        JSON.stringify(err.response?.body ?? {}),
+      );
+    }
+
+    if (confirmResult.status === "fulfilled") {
+      const r = confirmResult.value?.[0];
+      console.log(
+        `[booking] confirm → ${data.email} status=${r?.statusCode ?? "?"} messageId=${r?.headers?.["x-message-id"] ?? "?"}`,
+      );
+    } else {
+      const err = confirmResult.reason as {
+        response?: { body?: unknown };
+        message?: string;
+        code?: number;
+      };
+      console.error(
+        "[booking] confirm FAILED:",
+        err.code,
+        err.message,
+        JSON.stringify(err.response?.body ?? {}),
+      );
+    }
+
+    // If notification failed but confirmation succeeded, still return ok so the
+    // client gets feedback — we have the lead data in the logs at minimum.
+    if (
+      notifResult.status === "rejected" &&
+      confirmResult.status === "rejected"
+    ) {
+      return NextResponse.json(
+        { error: "Erreur lors de l'envoi du courriel." },
+        { status: 500 },
+      );
+    }
 
     return NextResponse.json({ ok: true });
   } catch (e: unknown) {

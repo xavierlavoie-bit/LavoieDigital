@@ -238,8 +238,8 @@ export default function Booking() {
               info@lavoiedigital.ca
             </a>
             <span className="hidden text-white/15 sm:inline">·</span>
-            <a href="tel:+14180000000" className="link-underline text-white/90">
-              +1 (418) 000-0000
+            <a href="tel:+15142901648" className="link-underline text-white/90">
+              +1 (514) 290-1648
             </a>
           </div>
         </motion.div>
@@ -375,7 +375,7 @@ function ContactStep({
           type="tel"
           value={data.phone}
           onChange={(v) => onChange("phone", v)}
-          placeholder="(418) 555-0123"
+          placeholder="(514) 555-0123"
         />
       </div>
       <div className="mt-4">
