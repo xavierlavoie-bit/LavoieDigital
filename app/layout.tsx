@@ -160,6 +160,7 @@ const jsonLd = {
       sameAs: [
         "https://www.linkedin.com/company/lavoie-digital/",
         "https://www.instagram.com/lavoie_digital/",
+        "https://www.facebook.com/profile.php?id=61590179200262",
       ],
       priceRange: "$$-$$$$",
       makesOffer: [
@@ -219,6 +220,7 @@ const jsonLd = {
       sameAs: [
         "https://www.linkedin.com/company/lavoie-digital/",
         "https://www.instagram.com/lavoie_digital/",
+        "https://www.facebook.com/profile.php?id=61590179200262",
       ],
     },
   ],

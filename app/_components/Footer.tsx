@@ -69,6 +69,7 @@ export default function Footer() {
             <li><a href="tel:+15142901648" className="link-underline text-white/70 hover:text-white">+1 (514) 290-1648</a></li>
             <li><a href="https://www.instagram.com/lavoie_digital/" target="_blank" rel="noopener noreferrer" className="link-underline text-white/70 hover:text-white">Instagram</a></li>
             <li><a href="https://www.linkedin.com/company/lavoie-digital/" target="_blank" rel="noopener noreferrer" className="link-underline text-white/70 hover:text-white">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61590179200262" target="_blank" rel="noopener noreferrer" className="link-underline text-white/70 hover:text-white">Facebook</a></li>
           </ul>
         </div>
       </div>
