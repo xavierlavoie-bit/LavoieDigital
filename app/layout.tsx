@@ -157,7 +157,10 @@ const jsonLd = {
         areaServed: "CA",
         availableLanguage: ["French", "English"],
       },
-      sameAs: [],
+      sameAs: [
+        "https://www.linkedin.com/company/lavoie-digital/",
+        "https://www.instagram.com/lavoie_digital/",
+      ],
       priceRange: "$$-$$$$",
       makesOffer: [
         {
@@ -213,7 +216,10 @@ const jsonLd = {
       name: SITE_NAME,
       url: SITE_URL,
       logo: `${SITE_URL}/logo.png`,
-      sameAs: [],
+      sameAs: [
+        "https://www.linkedin.com/company/lavoie-digital/",
+        "https://www.instagram.com/lavoie_digital/",
+      ],
     },
   ],
 };
